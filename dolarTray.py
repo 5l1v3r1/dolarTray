@@ -43,7 +43,7 @@ class MainWindow:
 		# Try and find a custom icon
 		hinst =  win32api.GetModuleHandle(None)
 		#iconPathName = os.path.realpath("icon.ico")
-		iconPathName = os.path.realpath("d:\python27\py\dolartray\money.ico")
+		iconPathName = os.path.realpath("money.ico")
 		#iconPathName = os.path.abspath(os.path.join( os.path.split(sys.executable)[0], "pyc.ico" ))
 		#if os.path.isfile(iconPathName):
 		icon_flags = win32con.LR_LOADFROMFILE | win32con.LR_DEFAULTSIZE
@@ -121,7 +121,7 @@ class MainWindow:
 
         def balonGoster(self,mesaj,baslik,sure=150):
                 nid = (self.hwnd, 0)
-                hicon = win32gui.LoadImage(win32api.GetModuleHandle(None), os.path.realpath("d:\python27\py\dolartray\money.ico"), win32con.IMAGE_ICON, 0, 0, win32con.LR_LOADFROMFILE | win32con.LR_DEFAULTSIZE)
+                hicon = win32gui.LoadImage(win32api.GetModuleHandle(None), os.path.realpath("money.ico"), win32con.IMAGE_ICON, 0, 0, win32con.LR_LOADFROMFILE | win32con.LR_DEFAULTSIZE)
                 win32gui.Shell_NotifyIcon(win32gui.NIM_MODIFY, \
                          (self.hwnd, 0, win32gui.NIF_INFO, win32con.WM_USER+20,\
                           hicon, "Balloon  tooltip",mesaj,sure,baslik))
